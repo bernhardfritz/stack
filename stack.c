@@ -60,7 +60,7 @@ int stack_size(Stack* stack) {
 
 void stack_destroy(Stack* stack) {
 	free(stack->elements);
-  stack->elements = NULL;
+	stack->elements = NULL;
 	free(stack);
 	stack = NULL;
 }
