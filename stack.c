@@ -48,10 +48,10 @@ StatusCode stack_pop(Stack* stack, void** out) {
 
 StatusCode stack_peek(Stack* stack, void** out) {
 	if (stack->logical_size == 0) {
-		return -1;
+		return FAILURE;
 	}
 	*out = stack->elements[stack->logical_size - 1];
-	return 1;
+	return SUCCESS;
 }
 
 int stack_size(Stack* stack) {
